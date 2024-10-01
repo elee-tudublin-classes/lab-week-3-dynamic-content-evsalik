@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<!-- Load common head content, including the favicon link -->
+    {% include "./partials/head.html" ignore missing with context %}
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!-- include navbar from partials -->
+    {% include "./partials/nav.html" ignore missing with context %}
+
+    <h1>Welcome {{ name }}</h1>
+
+    {% if name == "" %}
+        <h4>Try changing the URL to /params?name=your name</h4>
+    {% endif %}
+
+    <h1>This is the index page</h1>
+
+    <!-- Load common CSS and JS -->
+    {% include "./partials/dependencies.html" ignore missing with context %}
+</body>
+
+</html>

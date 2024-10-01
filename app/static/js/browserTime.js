@@ -1,6 +1,5 @@
 function getTime() {
     let now = new Date()
-
     // return object with date and time in required format
     return {
         date: now.toLocaleDateString('en-ie'),
